@@ -1,8 +1,9 @@
 package com.amani.ui;
 
-import com.amani.ui.add.AddUser;
+
 import com.amani.ui.views.dashboard.DashboardView;
 import com.amani.ui.views.list.ListView;
+import com.amani.ui.views.research.ResearchView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -57,9 +58,10 @@ public class MainLayout extends AppLayout {
         RouterLink listLink = new RouterLink("List", ListView.class); 
         listLink.setHighlightCondition(HighlightConditions.sameLocation());
 
-        RouterLink adduser = new RouterLink("Add", AddUser.class); 
-        adduser.setHighlightCondition(HighlightConditions.sameLocation());
-
-        addToDrawer(new VerticalLayout(listLink,adduser,new RouterLink("Dashboard", DashboardView.class))); 
+       
+        RouterLink research = new RouterLink("Recherche", ResearchView.class); 
+        research.setHighlightCondition(HighlightConditions.sameLocation());
+        
+        addToDrawer(new VerticalLayout(listLink,research,new RouterLink("Dashboard", DashboardView.class))); 
     }
 }

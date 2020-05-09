@@ -67,6 +67,27 @@ public class User extends AbstractEntity {
 	        }
 	        return new ArrayList<>();
 	    }
+
+		public void setUsername(String username) {
+			this.username = username;
+		}
+
+		public void setPassword(String password) {
+			this.password = password;
+		}
+
+		public void setActive(int active) {
+			this.active = active;
+		}
+
+		public void setRoles(String roles) {
+			this.roles = roles;
+		}
+
+		public void setPermissions(String permissions) {
+			this.permissions = permissions;
+		}
+	    
 	
 	
 
